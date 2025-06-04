@@ -7,8 +7,8 @@ A simple Django REST API for user authentication and note management.
 =====================
 
 1. Clone the repository
-   git clone <your-repo-link>
-   cd notes-backend
+   git clone https://github.com/KIRUBAKARAN9840/i2_global.git
+   cd i2_global
 
 2. Create a virtual environment
    python -m venv venv
