@@ -16,8 +16,8 @@ This is a simple **note-taking backend application** built with Django that supp
 
 1. **Clone the repository**
    ```bash
-   git clone <your-private-repo-link>
-   cd notes-backend
+   git clone <https://github.com/KIRUBAKARAN9840/i2_global.git>
+   cd i2_global
 
 
 2.Create and activate a virtual environment
