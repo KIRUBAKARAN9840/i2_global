@@ -1,54 +1,76 @@
-# Notes Backend App (Django)
+# Notes Backend (Django)
 
-This is a simple **note-taking backend application** built with Django that supports user authentication and CRUD operations for notes.
+A simple Django REST API for user authentication and note management.
 
----
+=====================
+🚀 HOW TO INSTALL & RUN LOCALLY
+=====================
 
-## 🚀 How to Install and Run Locally
+1. Clone the repository
+   git clone <your-repo-link>
+   cd notes-backend
 
-### 📦 Prerequisites
-- Python 3.8+
-- pip (Python package manager)
-- MySQL (or SQLite if used)
-- Git
+2. Create a virtual environment
+   python -m venv venv
+   venv\Scripts\activate   (on Windows)
 
-### 🔧 Setup Steps
+3. Install dependencies
+   pip install -r requirements.txt
 
-1. **Clone the repository**
-   ```bash
-   git clone <https://github.com/KIRUBAKARAN9840/i2_global.git>
-   cd i2_global
+4. Create a `.env` file in the root folder with the following:
+   SECRET_KEY=your-secret-key
+   DEBUG=True
+   DB_NAME=your-database-name
+   DB_USER=your-username
+   DB_PASSWORD=your-password
+   DB_HOST=localhost
+   DB_PORT=3306
 
+5. Run migrations
+   python manage.py makemigrations
+   python manage.py migrate
 
-2.Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate      # On Windows: venv\Scripts\activate
+6. Create superuser
+   python manage.py createsuperuser
 
+7. Run the development server
+   python manage.py runserver
 
-3.Install dependencies
-pip install -r requirements.txt
+Visit http://127.0.0.1:8000/ to check the API is running
 
-4.Set up environment variables
+=====================
+💡 DESIGN DECISIONS & TRADE-OFFS
+=====================
 
-Create a .env file and add:
+- Used Django REST Framework for quick development and reliable API structure.
+- Used MySQL as the primary database for production use.
+- JWT (via SimpleJWT) is used for token-based authentication.
+- Kept a single app (notesapp) for both user and notes logic to simplify structure.
+- Project is made docker-free to keep local testing and deployment simple.
 
-SECRET_KEY=your-secret-key
-DEBUG=True
-DB_NAME=notesdb
-DB_USER=your-mysql-username
-DB_PASSWORD=your-mysql-password
-DB_HOST=localhost
-DB_PORT=3306
+=====================
+📎 EXTERNAL RESOURCES USED
+=====================
 
+All logic and code are written from scratch. Below resources used for guidance only:
 
-5.Apply migrations
-python manage.py makemigrations
-python manage.py migrate
+- Django Official Docs: https://docs.djangoproject.com/
+- Simple JWT Docs: https://django-rest-framework-simplejwt.readthedocs.io/
 
-6.admin panel
-python manage.py createsuperuser
-(create login and password)
+=====================
+📂 PROJECT STRUCTURE
+=====================
 
+notes-backend/
+├── manage.py
+├── .env
+├── requirements.txt
+├── README.md
+├── notesbackend/      (settings, wsgi, urls)
+├── notesapp/          (models, views, urls, serializers, admin)
 
-at last............run the server
-python manage.py runserver
+=====================
+👤 AUTHOR
+=====================
+
+M. Kirubakaran
