@@ -62,12 +62,12 @@ All logic and code are written from scratch. Below resources used for guidance o
 =====================
 
 notes-backend/
-├── manage.py
-├── .env
-├── requirements.txt
-├── README.md
-├── notesbackend/      (settings, wsgi, urls)
-├── notesapp/          (models, views, urls, serializers, admin)
+─ manage.py
+─ .env
+─ requirements.txt
+─ README.md
+─ notesbackend/      (settings, wsgi, urls)
+─ notesapp/          (models, views, urls, serializers, admin)
 
 =====================
 👤 AUTHOR
